@@ -138,7 +138,9 @@ function Register(props) {
   const [phone, setPhone] = useState("");
   const [allUsers, setAllUsers] = useRecoilState(allUsersState);
   const [newUser, setNewUser] = useRecoilState(createUserState);
-  function createUser() {
+
+  function createUser(event) {
+    event.preventDefault();
     fetch("https://k4backend.osuka.dev/users", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -179,119 +181,112 @@ function Register(props) {
 
   return (
     <div style={{ position: "relative", left: "300px", top: "-200px" }}>
-      * Förnamn <br />
-      <input
-        required
-        className="textInput"
-        type="text"
-        onChange={(e) => setFName(e.target.value)}
-        value={fName}
-        name="firstName"
-      />
-      <br /> <br />
-      * Efternamn <br />
-      <input
-        required
-        className="textInput"
-        type="text"
-        onChange={(e) => setLName(e.target.value)}
-        value={lName}
-        name="lastName"
-      />
-      <br /> <br />
-      * Email <br />
-      <input
-        required
-        className="textInput"
-        type="email"
-        onChange={(e) => setEmail(e.target.value)}
-        value={email}
-        name="email"
-      />
-      <br /> <br />
-      * Användarnamn <br />
-      <input
-        required
-        className="textInput"
-        type="text"
-        onChange={(e) => setUserName(e.target.value)}
-        value={userName}
-        name="userName"
-      />
-      <br /> <br />
-      * Lösenord <br />
-      <input
-        required
-        className="textInput"
-        type="password"
-        onChange={(e) => setPassword(e.target.value)}
-        value={password}
-        name="password"
-      />
-      <br />
-      <br />
-      Stad
-      <br />
-      <input
-        className="textInput"
-        type="text"
-        onChange={(e) => setCity(e.target.value)}
-        value={city}
-        name="city"
-      />
-      <br />
-      <br />
-      Gata
-      <br />
-      <input
-        className="textInput"
-        type="text"
-        onChange={(e) => setStreet(e.target.value)}
-        value={street}
-        name="street"
-      />
-      <br />
-      <br />
-      Nummer
-      <br />
-      <input
-        className="textInput"
-        type="number"
-        onChange={(e) => setNumber(e.target.value)}
-        value={number}
-        name="number"
-      />
-      <br />
-      <br />
-      Postnummer
-      <br />
-      <input
-        className="textInput"
-        type="text"
-        onChange={(e) => setZipcode(e.target.value)}
-        value={zipcode}
-        name="zipcode"
-      />
-      <br />
-      <br />
-      Telefonnummer
-      <br />
-      <input
-        className="textInput"
-        type="text"
-        onChange={(e) => setPhone(e.target.value)}
-        value={phone}
-        name="phone"
-      />
-      <br />
-      <br />
-      <button
-        onClick={() => {
-          createUser();
-        }}
-      >
-        Registrera ny användare
-      </button>
+      <form onSubmit={createUser}>
+        * Förnamn <br />
+        <input
+          className="textInput"
+          type="text"
+          onChange={(e) => setFName(e.target.value)}
+          value={fName}
+          name="firstName"
+        />
+        <br /> <br />
+        * Efternamn <br />
+        <input
+          className="textInput"
+          type="text"
+          onChange={(e) => setLName(e.target.value)}
+          value={lName}
+          name="lastName"
+        />
+        <br /> <br />
+        * Email <br />
+        <input
+          className="textInput"
+          type="email"
+          onChange={(e) => setEmail(e.target.value)}
+          value={email}
+          name="email"
+        />
+        <br /> <br />
+        * Användarnamn <br />
+        <input
+          required
+          className="textInput"
+          type="text"
+          onChange={(e) => setUserName(e.target.value)}
+          value={userName}
+          name="userName"
+        />
+        <br /> <br />
+        * Lösenord <br />
+        <input
+          required
+          className="textInput"
+          type="password"
+          onChange={(e) => setPassword(e.target.value)}
+          value={password}
+          name="password"
+        />
+        <br />
+        <br />
+        Stad
+        <br />
+        <input
+          className="textInput"
+          type="text"
+          onChange={(e) => setCity(e.target.value)}
+          value={city}
+          name="city"
+        />
+        <br />
+        <br />
+        Gata
+        <br />
+        <input
+          className="textInput"
+          type="text"
+          onChange={(e) => setStreet(e.target.value)}
+          value={street}
+          name="street"
+        />
+        <br />
+        <br />
+        Nummer
+        <br />
+        <input
+          className="textInput"
+          type="number"
+          onChange={(e) => setNumber(e.target.value)}
+          value={number}
+          name="number"
+        />
+        <br />
+        <br />
+        Postnummer
+        <br />
+        <input
+          className="textInput"
+          type="text"
+          onChange={(e) => setZipcode(e.target.value)}
+          value={zipcode}
+          name="zipcode"
+        />
+        <br />
+        <br />
+        Telefonnummer
+        <br />
+        <input
+          className="textInput"
+          type="text"
+          onChange={(e) => setPhone(e.target.value)}
+          value={phone}
+          name="phone"
+        />
+        <br />
+        <br />
+        <input type="submit" value="Registrera ny användare" />
+      </form>
     </div>
   );
 }
