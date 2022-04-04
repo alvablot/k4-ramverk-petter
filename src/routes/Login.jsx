@@ -8,11 +8,7 @@ import Links from "../components/Links";
 import Cart from "../components/Cart";
 
 function Login(props) {
-  const {
-    addToCart,
-    summonPrice,
-    totalAmountOfProducts,
-  } = props;
+  const { addToCart, summonPrice, totalAmountOfProducts } = props;
   const [user, setUser] = useRecoilState(userState);
   const [allUsers, setAllUsers] = useRecoilState(allUsersState);
   const resetUser = useResetRecoilState(userState);
@@ -39,10 +35,7 @@ function Login(props) {
       <div>
         <header className="App-header">
           <Links userLink={userLink} />
-          <Cart
-            value=""
-            addToCart={addToCart}
-          />
+          <Cart value="" addToCart={addToCart} />
         </header>
         <main className="products">
           <h3>
@@ -95,6 +88,7 @@ function Login(props) {
           Användarnamn
           <br />
           <input
+            required
             className="textInput"
             type="text"
             onChange={(e) => setUserName(e.target.value)}
@@ -104,6 +98,7 @@ function Login(props) {
           <br /> <br />
           Lösenord <br />
           <input
+            required
             className="textInput"
             type="password"
             onChange={(e) => setPassword(e.target.value)}
@@ -186,6 +181,7 @@ function Register(props) {
     <div style={{ position: "relative", left: "300px", top: "-200px" }}>
       * Förnamn <br />
       <input
+        required
         className="textInput"
         type="text"
         onChange={(e) => setFName(e.target.value)}
@@ -195,6 +191,7 @@ function Register(props) {
       <br /> <br />
       * Efternamn <br />
       <input
+        required
         className="textInput"
         type="text"
         onChange={(e) => setLName(e.target.value)}
@@ -204,6 +201,7 @@ function Register(props) {
       <br /> <br />
       * Email <br />
       <input
+        required
         className="textInput"
         type="email"
         onChange={(e) => setEmail(e.target.value)}
@@ -213,6 +211,7 @@ function Register(props) {
       <br /> <br />
       * Användarnamn <br />
       <input
+        required
         className="textInput"
         type="text"
         onChange={(e) => setUserName(e.target.value)}
@@ -222,6 +221,7 @@ function Register(props) {
       <br /> <br />
       * Lösenord <br />
       <input
+        required
         className="textInput"
         type="password"
         onChange={(e) => setPassword(e.target.value)}
