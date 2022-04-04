@@ -74,8 +74,8 @@ function App() {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        username: "admin",
-        password: "admin",
+        username: username,
+        password: password,
       }),
     })
       .then((res) => res.json())
