@@ -1,0 +1,155 @@
+body {
+  background: #e4e4e4;
+}
+h2 {
+  color: rgb(67, 67, 67);
+  padding-left: 20px;
+}
+h4 {
+  color: rgb(67, 67, 67);
+}
+button {
+  margin: 10px 0px 10px;
+  padding: 5px;
+  font-size: 1rem;
+}
+a {
+  margin: 10px;
+  color: white;
+  text-decoration: none;
+}
+.black {
+  color: black;
+}
+.black:hover {
+  color: red;
+}
+a:hover {
+  color: red;
+}
+button:hover {
+  color: red;
+}
+img {
+  width: 50%;
+  aspect-ratio: 4 / 3;
+  border-radius: 10px;
+  object-fit: auto;
+  object-position: center;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.imgContainer {
+  padding: 0px;
+}
+.thumbs {
+  width: 50px;
+  aspect-ratio: 4 / 3;
+  border: 1px solid grey;
+  object-fit: auto;
+  object-position: center;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.linkMenue {
+  width: 70%;
+  color: white;
+  padding: 10px;
+}
+.App {
+  max-width: 80rem;
+  margin: 0 auto;
+  background: rgb(240, 240, 240);
+  height: 100%;
+  padding: 20px;
+}
+.App-header {
+  display: block;
+  background-color: #282c34;
+
+  color: white;
+  padding: 5px;
+}
+.headline {
+  display: block;
+  width: 100%;
+}
+.App-link {
+  color: #61dafb;
+}
+
+.cart {
+  border: 1px solid #e3e2e2;
+  color: rgb(0, 0, 0);
+  position: relative;
+  right: 0px;
+  top: -1px;
+  background: #f4f3f3;
+  padding: 10px;
+  margin: 5px;
+}
+.cartItems {
+  background: #f4f2f2;
+  padding: 4px;
+  border: 1px solid #e3e2e2;
+  margin: 5px;
+}
+.summonPrice {
+  color: rgb(148, 106, 74);
+}
+.list {
+  height: 100%;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 2fr));
+  gap: 1rem;
+}
+.adminUserList {
+  display: inline-block;
+  width: 100%;
+}
+.adminProductList {
+
+  display: inline-block;
+  width: 100%;
+}
+.adminItems {
+  flex-direction: column;
+  background: #f2f2f2;
+  border: 1px solid #e3e2e2;
+  color: #000000;
+  padding: 5px;
+}
+.content {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(20rem,1fr));
+  gap:1em;
+  margin-top:1em
+}
+.products {
+  background: #f2f2f2;
+  border: 1px solid #e3e2e2;
+  color: #000000;
+  padding: 30px;
+  object-position: 50% 50%;
+  box-shadow: rgba(38, 37, 37, 0.3) 0px 0px 10px 0px;
+}
+
+.details {
+  background: #f2f2f2;
+  border: 1px solid #e3e2e2;
+  color: #000000;
+
+  padding: 10px;
+  margin: 5px;
+}
+.amount {
+  background: #e8f050;
+  color: #886868;
+  border: 1px solid #524f4f;
+  padding: 5px;
+  padding-left: 10px;
+  text-align: center;
+  margin: 5px;
+}
+.buttonText {
+  color: black;
+}
