@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import "./App.css";
-import { getProducts } from "./data";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { amountState, priceState } from "./recoil/amountOfProducts/atom";
 import { productListState, filterProductState } from "./recoil/products/atom";
