@@ -65,7 +65,7 @@ function App() {
       console.log(userStatus);
     } else {
       setUserStatus({ userStatus, loginStatus: "Du är inte inloggad" });
-      console.log(userStatus);
+     // console.log(userStatus);
     }
   }
 
