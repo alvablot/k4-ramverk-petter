@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { adminState } from "../recoil/adminauth/atom";
 import { useRecoilState, useResetRecoilState } from "recoil";
 import { allUsersState } from "../recoil/allUsers/atom";
 import { userStatusStore } from "../recoil/userStatusStore/atom";
+import { productListState, filterProductState } from "../recoil/products/atom";
 import Links from "../components/Links";
 import Cart from "../components/Cart";
-import { productListState } from "../recoil/products/atom";
 
 function Admin(props) {
   const { addToCart } = props;
@@ -18,8 +18,12 @@ function Admin(props) {
   const [password, setPassword] = useState("");
   const isLoggedin = !!admin.token;
   let [userLink, setUserLink] = useState("");
+  const [filterProducts, setFilterProducts] =
+    useRecoilState(filterProductState);
 
   if (isLoggedin) {
+    setFilterProducts("");
+
     return (
       // Inloggad
       <div>
@@ -28,7 +32,7 @@ function Admin(props) {
           <Cart value="" addToCart={addToCart} />
         </header>
         <main>
-          <h3>{userStatus.loginStatus}</h3>
+          <h3>Du är inloggad som admininstratör</h3>
 
           <button onClick={resetUser}>Logga ut</button>
           <div className="content">
