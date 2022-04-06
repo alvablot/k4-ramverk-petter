@@ -15,11 +15,14 @@ function Cart(props) {
 
   let i = 0;
   return (
+    
     <div className="products">
       <div className="cart">
         {cartArray.map((item, i) => {
           return (
+            
             <div key={`asd_${i}`}>
+              <img className="thumb" src={productlist[item.id-1].image} />
               1 st {item.title} {Math.round(item.price)}kr<br />
               <a href="#" className="black" onClick={() => {
                 return props.deleteItem(i);
@@ -28,7 +31,8 @@ function Cart(props) {
             </div>
           );
         })}
-        <span key={`asc_${i}`} className="summonPrice">
+        <div  style={{position:"relative", top:"40px"}}>
+        <span key={`asc_${i}`} className="summonPrice"> <br />
           <b key={`ayukyd_${i}`}>Totalt antal varor: {totalAmountOfProducts}</b>
         </span>
         <br />
@@ -36,7 +40,7 @@ function Cart(props) {
           <b key={`atyjytsd_${i}`}>Summa: {Math.round(summonPrice)}kr</b>
           <br />
           Frakt tillkommer
-        </span>
+        </span></div>
       </div>
     </div>
   );

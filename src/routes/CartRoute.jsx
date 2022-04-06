@@ -8,6 +8,7 @@ export default function CartRoute(props) {
     <div>
       <header className="App-header">
         <Links value="" addToCart={addToCart} />
+        <Cart />
       </header>
       <main style={{ padding: "1rem 0" }}>
         <h3>Varukorg</h3>

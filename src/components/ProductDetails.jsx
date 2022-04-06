@@ -34,7 +34,7 @@ function ProductDetails(props) {
         <div>{productlist[id].description}</div>
         <div>Pris: {Math.round(productlist[id].price)}kr</div>
         <button onClick={() => addToCart(id, Math.round(productlist[id].price), 1)}>
-          Lägg till i kundkorg
+          Lägg till i varukorg
         </button>
       </div>
     </div>

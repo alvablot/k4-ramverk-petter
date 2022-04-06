@@ -2,6 +2,7 @@ import CartDetails from "../components/CartDetails";
 import Links from "../components/Links";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { amountState, priceState } from "../recoil/amountOfProducts/atom";
+import Cart from "../components/Cart";
 
 export default function CheckoutRoute(props) {
   const [totalAmountOfProducts, setTotalAmountOfProducts] =
@@ -23,6 +24,7 @@ export default function CheckoutRoute(props) {
     <div>
       <header className="App-header">
         <Links />
+        <Cart />
       </header>
       <main>
         <h3>Kassa</h3>

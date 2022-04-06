@@ -35,6 +35,7 @@ a {
   text-decoration: none;
   font-size: 1rem;
 }
+
 .container {
   height: 95px;
 }
@@ -60,6 +61,12 @@ img {
   object-position: center;
   box-shadow: rgba(46, 46, 55, 0.2) 0px 7px 29px 0px;
 }
+.cartImg {
+  border: 0px;
+  aspect-ratio: unset;
+  box-shadow: none;
+  width: 50px;
+}
 .bigImg {
   width: 50%;
   aspect-ratio: inherit;
@@ -68,7 +75,6 @@ img {
 
   border: 1px solid #838080;
 
- 
   box-shadow: rgba(46, 46, 55, 0.2) 0px 7px 29px 0px;
 }
 .linkMenue {
@@ -86,7 +92,7 @@ img {
 .App-header {
   display: flex;
   background-color: #282c34;
-  min-height: 200px;
+  max-height: 120px;
   color: white;
   padding: 5px;
 }
@@ -122,6 +128,9 @@ img {
 }
 .summonPrice {
   color: rgb(148, 106, 74);
+  position: relative;
+  top: -57px;
+  left: 4px;
 }
 .thumbs {
   width: 50px;
